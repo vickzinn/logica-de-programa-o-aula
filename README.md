@@ -1,0 +1,67 @@
+print("good morning")
+nome = "vitor"
+idade = 16
+
+print('oi meu nome é '+ nome + ',tenho' + str(idade) + 'anos de idade')
+
+print('oi meu nome é', nome, ',tenho', idade, 'anos de idade')
+
+print(f'olá, nome é {nome} e tenho {idade} anos de idade')
+print(100*'_')
+#REVIEW - eliminando qubre de linha
+print('dirigir', end='')
+print(' e legal')
+
+valor = 1.23456789
+print(f'{valor:,.2f}')
+
+print(100*'_')
+
+peso = input('digite seu peso: ').replace(',','.')
+peso = float(peso)
+
+print(100*'_')
+
+#NOTE - numero 3 atividade karyton
+print('xangas')
+print(100*'_')
+
+name = "vitinho"
+print('carlos')
+
+print(100*'_')
+
+age = int(input('digite sua idade: '))
+
+if age >= 18:
+    print('voce e maior de idade')
+    print('voce esta no bloco if')
+else:
+    print('voce e menor de idade')
+    print('voce esta no bloco else')
+
+print(100*'_')
+
+nick = input('digite seu nome: ').upper()
+
+print(f'seu nome é {nick}')
+
+print(100*'_')
+
+#TODO - operador ternario
+'''
+exemplo:
+print('maior de idade' if age >= 18 else 'menor de idade')
+o if inprime o da esquerda e o else o da direita
+'''
+
+#para subir o codigo para o github
+#git init -> inicia o repositorio
+#git add . -> adiciona os arquivos  
+#git commit -m "mensagem" -> commita o codigo
+#git branch -M main -> cria a branch main
+#git remote add origin link do repositorio -> adiciona o repositorio remoto
+#git push -u origin main -> envia o codigo para o repositorio remoto
+#git pull origin main -> puxa o codigo do repositorio remoto
+#git status -> mostra o status do repositorio
+#git log -> mostra o historico de commits
