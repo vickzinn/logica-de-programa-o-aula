@@ -1,0 +1,103 @@
+'''
+aula 03
+'''
+
+peso = float(input('digite seu peso: '))
+altura = float(input('digite sua altura: '))
+imc = peso / (altura*altura) 
+print(f'seu IMC é: {imc:.2f}')  
+
+if imc <= 18.5:
+    print('abaixo do normal')
+elif imc <= 24.9:
+    print('normal')
+elif imc <= 29.9:
+    print ('exesso de peso')
+elif imc >= 30:
+    print ('obesidade')
+elif imc >= 35:
+    print ('obesidade II')
+elif imc >= 40:
+    print ('obesidade III')
+
+'''
+atividade do elevador
+'''
+
+print(100*'_')
+
+limite = 200
+
+peso_pessoa = float(input('digite o peso da pessoa: '))
+peso_carga = float(input('digite o peso da carga: '))
+peso_total = (peso_pessoa+peso_carga)
+
+if peso_total >= 201:
+    print('assima do peso limite')
+else:
+    print('esta dentro do peso')
+print(peso_total)
+print(100*'_')
+
+numero = 10
+acabou = 0
+while numero >= 0:
+    print(numero)
+    numero -=1
+print('BOOM')
+numero = 10
+
+#FIXME - nao pode escrever em else, mas pode escrever no if e no elif
+
+while True:
+    print(40*'_', 'sistema de console 2°DS', 40*'_')
+    print('1 - calculadora de imc')
+    print('2 - elevador')
+    print('3 - bomba')
+    print('4 - sair do sistema')
+
+    opcao = input('digite um numero: ')
+
+    if opcao == '1':
+
+        print('peso da pessoa: ', peso)
+        print('altura da pessoa: ', altura)
+        print('IMC da pessoa: ', imc)
+        print(f'seu IMC é: {imc:.2f}')  
+
+        if imc <= 18.5:
+            print('abaixo do normal')
+        elif imc <= 24.9:
+            print('normal')
+        elif imc <= 29.9:
+            print ('exesso de peso')
+        elif imc >= 30:
+            print ('obesidade')
+        elif imc >= 35:
+            print ('obesidade II')
+        elif imc >= 40:
+            print ('obesidade III')
+
+    elif opcao == '2':
+
+        print('peso da pessoa: ', peso_pessoa)
+        print('peso da carga: ', peso_carga)
+        print('peso total: ', peso_total)
+
+    elif opcao == '3':
+        print('bomba ativada')
+        while numero >= 0:
+            print(numero)
+            numero -=1
+        print('BOOM')
+
+        pass
+    elif opcao == '4':
+
+        print('saindo do sistema...')
+        break
+    elif opcao > '4':
+        print('opcao invalida')
+print(100*'_')
+
+print('hello world')
