@@ -1,0 +1,16 @@
+'''
+atividade 2
+'''
+numeros = []
+
+while True:
+    numero = int(input('digite um numero ou H para sair: '))
+
+    if numero == 'H':
+        print('saindo do programa...')
+        break
+    elif numero < 0:
+        print('numero negativo, tente novamente')
+    else:
+        numeros.append(numero)
+        print(f'numeros digitados: {numeros}')
