@@ -1,0 +1,60 @@
+'''
+atividade_karython_1
+'''
+def menu():
+    print('menu: ')
+    print('1-colocar novo nome: ')
+    print('2-procurar nome na lista: ')
+    print('3-mudar nome: ')
+    print('4-apagar nome: ')
+    print('5-mostrar todos os nomes: ')
+    print('6-sair: ')
+
+nomes = []
+
+while True:
+    menu()
+    opcao = input('esolha uma das opcoes a baixo: ')
+
+    if opcao == '1':
+        nome = input('coloque um nome: ')
+        nomes.append(nome)
+        print('seu nome foi adicionado...')
+    
+    
+    elif opcao == '2':
+        nome = input('digite o nome que deseja procurar: ')
+        if nome in nomes:
+            print(f'o nome {nome} esta na lista')
+        else:
+            print(f'o nome {nome} nao esta na lista')
+
+    elif opcao == '3':
+        nome_antigo = input('digite o nome que deseja mudar: ')
+        if nome_antigo in nomes:
+            novo_nome = input('digite o novo nome: ')
+            idx = nomes.index(nome_antigo)
+            nomes[idx] = novo_nome
+            print('nome alterado com sucesso!')
+        else:
+            print('nome nao encontrado')
+
+    elif opcao == '4':
+        nome = input('digite o nome que deseja apagar: ')
+        if nome in nomes:
+            nomes.remove(nome)
+            print('nome apagado com sucesso!')
+        else:
+            print('nome nao encontrado')
+
+    elif opcao == '5':
+        print('lista de nomes:')
+        for n in nomes:
+            print('-', n)
+
+    elif opcao == '6':
+        print('saindo do programa...')
+        break
+
+    else:
+        print('opcao invalida, tente novamente')
