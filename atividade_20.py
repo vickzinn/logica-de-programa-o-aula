@@ -1,0 +1,8 @@
+num1 = float(input('digite o número em metros: '))
+num2 = (num1 *100)
+num3 = (num1 *1000)
+num4 = (num1/1000)
+print(num1, "metros")
+print(num2, "centímetros")
+print(num3, "milímetros")
+print(num4, "quilômetros")
