@@ -9,6 +9,7 @@ paradigmas
 #self - quando quero me referir a algum atributo da classe
 #construtor - quando quero criar um novo objeto, chamo o contrutor para acessar os atributos
 # __init__ - método construtor
+
 vida = 250
 
 class Personagem:
@@ -42,8 +43,8 @@ class Personagem:
         print(f'agora {personagem.nome} está com {personagem.vida}')
 
 class Guerreiro(Personagem):
-    def __init__(self, nome, vida):
-        super().__init__(nome, vida, escudo=False)
+    def __init__(self, nome, vida, escudo=False):
+        super().__init__(nome, vida)
         self.__escudo = escudo
     
     @property
@@ -63,6 +64,7 @@ class Guerreiro(Personagem):
     
     def protecao(self):
         self.__vida += 20
+        self.__escudo += 20
 
 
 class Arcano(Personagem):
@@ -88,25 +90,23 @@ class Arqueiro(Personagem):
         self.__flecha = flecha
 
     def atacar(self, personagem):
-        dano = random.choice(35, 55)
+        ataque = [35, 45, 55]
+        dano = random.choice(ataque)
         personagem.vida -= dano
         print(f'{self.nome} atacou {personagem.nome} e tirou {dano} pontos de vida')
         print(f'agora {personagem.nome} está com {personagem.vida}') 
 
-print('---PERSONAGENS---')
 '''
 personagem1(f'noah' 200)
 personagem2(f'kaleb' 200)
-personagem3(f'mortus'200)
+personagem3(f'mortus' 200)
 
 oponente1(f'michael' 200)
 oponente2(f'diego' 200)
 oponente3(f'delete' 200 )
 '''
 print("---PERSONAGENS---")
-
-personagem1 = ('carlos', vida)
-personagem2 = ('leandro', vida)
+print('p1 - kaleb\np2 - noah\np3 - mortus\no1 - michael\no2 - diego\no3 - delete')
 
 noah = Arqueiro('noah', vida)
 kaleb = Guerreiro('kaleb', vida)
@@ -120,6 +120,5 @@ print('---LUTA---')
 if vida <= 0:
     print ('morreu 💀')
 else:
-    print('continua em batalha')
-
-personagem1.atacar(personagem2)
+    print('====continua em batalha====')
+noah.atacar(delete)
